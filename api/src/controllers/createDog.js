@@ -3,40 +3,41 @@
 const { Dog, Temperaments } = require("../db");
 const { Op } = require("sequelize");
 
-const createDog = async (
+const createDog = async ({
   name,
   weight,
   height,
   image,
   life_span,
-  temperaments,
-  created
-) => {
+  temperament,
+}) => {
   const newDog = await Dog.create({
     name,
     weight,
     height,
     image,
     life_span,
-    created,
   });
-
-  for (const temperament of temperaments) {
-    const tempEncontrado = await Temperaments.findOne({
+  console.log("temp", temperament);
+  for (const temp of temperament) {
+    const temperamentoEncontrado = await Temperaments.findOne({
       where: {
         name: {
-          [Op.iLike]: temperament,
+          [Op.iLike]: temp,
         },
       },
     });
-    if (tempEncontrado) {
-      await newDog.addTemperaments(tempEncontrado);
-    } else {
-      const nuevoTemp = await Temperaments.create({ name: temperament });
-      await newDog.addTemperaments(nuevoTemp);
-    }
 
-    return newDog;
+    if (temperamentoEncontrado) {
+      await newDog.addTemperament(temperamentoEncontrado);
+    } else {
+      const nuevoTemperamento = await Temperaments.create({
+        name: temp,
+      });
+      await newDog.addTemperament(nuevoTemperamento);
+    }
   }
+
+  return newDog;
 };
 module.exports = createDog;

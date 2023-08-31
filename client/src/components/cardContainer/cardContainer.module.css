@@ -1,0 +1,8 @@
+/** @format */
+
+.cardsContainer {
+  display: flex;
+  margin-top: 71px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

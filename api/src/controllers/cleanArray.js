@@ -8,7 +8,7 @@ const cleanArray = (arr) =>
       name: ele.name,
       weight: ele.weight,
       height: ele.height,
-      image: ele.image.url,
+      image: ele.reference_image_id,
       life_span: ele.life_span,
       temperament: ele.temperament,
       created: false,
