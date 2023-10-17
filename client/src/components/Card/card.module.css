@@ -1,20 +1,14 @@
 /** @format */
 
 .card {
-  background-color: rgba(
-    245,
-    245,
-    245,
-    0.8
-  ); /* Fondo desenfocado para resaltar los datos */
+  background-color: rgba(245, 245, 245, 0.8);
   border-radius: 8px;
-
-  padding: 10px;
+  padding: 2px;
   text-align: center;
-  flex-basis: calc(24.36% - 20px);
-  margin: 7px 0;
+  flex: 0 0 calc(22.4% - 20px); /* Establece el mismo tamaño para todas las tarjetas */
   box-sizing: border-box;
   transition: background-color 0.3s ease;
+  margin: 4px;
 }
 
 .card:hover {
@@ -28,13 +22,13 @@
 }
 
 .card p {
-  margin: 5px;
+  margin: 2px;
   font-size: 14px;
   color: #888;
 }
 
 .card img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto; /* Permite que la imagen mantenga su relación de aspecto */
   border-radius: 8px;
 }

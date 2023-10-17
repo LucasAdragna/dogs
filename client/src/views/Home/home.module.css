@@ -3,7 +3,7 @@
 .containerHome {
   display: inline-block;
   padding: 8px;
-  margin-top: 150px;
+  margin-top: 90px;
   border-radius: 5px;
   margin-right: 5px;
 }
@@ -11,11 +11,11 @@
   display: flex;
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
-  margin-top: 20px;
+  margin-top: 2px;
 }
 .page {
   padding: 10px 20px;
-  margin: 0 5px;
+  margin: 0 2px;
   background-color: #396d6e;
   color: #fff;
   border: none;

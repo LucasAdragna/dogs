@@ -31,10 +31,15 @@ function reducer(state = initialState, action) {
     case DOG_ERROR:
       return { ...state, error: action.payload };
     case DOG_NAME:
-      if (state.dogs.name !== action.payload) {
-        alert("No exite un perro con el siguiente nombre");
-      }
+      // let nombre = state.dogs.map(
+      //   (dog) => dog.name.length === action.payload.length
+      // );
+      // console.log("REDUCER NAME", nombre);
+      // if (!nombre) {
+      //   alert("No exite un perro con el siguiente nombre");
+      // }
       return { ...state, dogs: action.payload };
+
     case ALL_TEMPERAMENT:
       return {
         ...state,

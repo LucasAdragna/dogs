@@ -28,12 +28,19 @@ export const DogsError = (error) => {
 
 export const dogName = (name) => {
   return async function (dispatch) {
-    const dogApi = await axios.get(`http://localhost:3001/dogs?name=${name}`);
-    const dogs = dogApi.data;
-    if (!dogs) {
-      alert("No se encontro la data deceada");
+    const { data } = await axios.get(`http://localhost:3001/dogs?name=${name}`);
+    try {
+      const dato = data.filter((dogName) =>
+        dogName.name.toLowerCase().includes(name.toLowerCase())
+      );
+      if (!dato.length) {
+        alert(`No exite un perro con el nombre: ${name} `);
+      } else {
+        return dispatch({ type: DOG_NAME, payload: dato });
+      }
+    } catch (error) {
+      console.error("Error al obtener el nombre:", error);
     }
-    dispatch({ type: DOG_NAME, payload: dogs });
   };
 };
 

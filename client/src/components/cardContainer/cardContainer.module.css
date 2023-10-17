@@ -2,7 +2,8 @@
 
 .cardsContainer {
   display: flex;
-  margin-top: 71px;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 50px;
+  margin-right: 150px;
 }
