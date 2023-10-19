@@ -15,7 +15,7 @@ const NavBar = () => {
         <FontAwesomeIcon icon={faHome} className="icon" />
         <li>
           <Link className={style.Link} to="/home">
-            HOME
+            INICIO
           </Link>
         </li>
         <FontAwesomeIcon icon={faDog} className="icon" />
@@ -27,7 +27,7 @@ const NavBar = () => {
         <FontAwesomeIcon icon={faBars} className="icon" />
         <li>
           <Link className={style.linkTres} to="/">
-            INICIO
+            BIENVENIDO
           </Link>
         </li>
       </ul>
