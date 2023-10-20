@@ -1,9 +1,0 @@
-/** @format */
-
-.cardsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 100px;
-  margin-right: 150px;
-}
